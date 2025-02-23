@@ -1,9 +1,9 @@
-﻿using CodeDesignPlus.Core.Abstractions;
+﻿using SDK.Core.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CodeDesignPlus.Core.Models.Pager
+namespace SDK.Core.Models.Pager
 {
     /// <summary>
     /// Pagina los datos de un IQueryable
@@ -64,7 +64,7 @@ namespace CodeDesignPlus.Core.Models.Pager
         public Pager(int totalItems, List<T> data, int currentPage = 1, int pageSize = 10, int maxPages = 10)
         {
             // calculate total pages
-            var totalPages = (int)Math.Ceiling((decimal)totalItems / (decimal)pageSize);
+            var totalPages = (int)Math.Ceiling(totalItems / (decimal)pageSize);
 
             // ensure current page isn't out of range
             if (currentPage < 1)
@@ -82,8 +82,8 @@ namespace CodeDesignPlus.Core.Models.Pager
             else
             {
                 // total pages more than max so calculate start and end pages
-                var maxPagesBeforeCurrentPage = (int)Math.Floor((decimal)maxPages / (decimal)2);
-                var maxPagesAfterCurrentPage = (int)Math.Ceiling((decimal)maxPages / (decimal)2) - 1;
+                var maxPagesBeforeCurrentPage = (int)Math.Floor(maxPages / (decimal)2);
+                var maxPagesAfterCurrentPage = (int)Math.Ceiling(maxPages / (decimal)2) - 1;
                 if (currentPage <= maxPagesBeforeCurrentPage)
                 {
                     // current page near the start
@@ -109,19 +109,19 @@ namespace CodeDesignPlus.Core.Models.Pager
             var endIndex = Math.Min(startIndex + pageSize - 1, totalItems - 1);
 
             // create an array of pages that can be looped over
-            var pages = Enumerable.Range(startPage, (endPage + 1) - startPage);
+            var pages = Enumerable.Range(startPage, endPage + 1 - startPage);
 
             // update object instance with all pager properties required by the view
-            this.TotalItems = totalItems;
-            this.CurrentPage = currentPage;
-            this.PageSize = pageSize;
-            this.TotalPages = totalPages;
-            this.StartPage = startPage;
-            this.EndPage = endPage;
-            this.StartIndex = startIndex;
-            this.EndIndex = endIndex;
-            this.Pages = pages;
-            this.Data = data;
+            TotalItems = totalItems;
+            CurrentPage = currentPage;
+            PageSize = pageSize;
+            TotalPages = totalPages;
+            StartPage = startPage;
+            EndPage = endPage;
+            StartIndex = startIndex;
+            EndIndex = endIndex;
+            Pages = pages;
+            Data = data;
         }
     }
 }

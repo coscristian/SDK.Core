@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeDesignPlus.Core.Abstractions
+namespace SDK.Core.Abstractions
 {
     /// <summary>
     /// Define la estructura base para las entidades y dto y tipos genericos
@@ -12,7 +12,7 @@ namespace CodeDesignPlus.Core.Abstractions
     /// </summary>
     /// <typeparam name="TKey">Tipo de dato que identificara el registro</typeparam>
     /// <typeparam name="TUserKey">Tipo de datos que identificara el usuario</typeparam>
-    public interface IBase<TKey, TUserKey>: IBase
+    public interface IBase<TKey, TUserKey> : IBase
     {
         /// <summary>
         /// Id del registro

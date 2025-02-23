@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
 
-namespace CodeDesignPlus.Core.Test.Helpers.Context
+namespace SDK.Core.Test.Helpers.Context
 {
     /// <summary>
     /// Contexto de base de datos fake para validar la paginación

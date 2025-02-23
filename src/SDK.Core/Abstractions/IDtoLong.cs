@@ -1,4 +1,4 @@
-﻿namespace CodeDesignPlus.Core.Abstractions
+﻿namespace SDK.Core.Abstractions
 {
     /// <summary>
     /// Definición para los data transfer object de tipo long

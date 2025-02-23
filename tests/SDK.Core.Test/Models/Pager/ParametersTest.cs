@@ -1,10 +1,10 @@
-﻿using CodeDesignPlus.Core.Models.Pager;
-using CodeDesignPlus.Core.Test.Helpers.Extensions;
+﻿using SDK.Core.Models.Pager;
+using SDK.Core.Test.Helpers.Extensions;
 using System;
 using System.Linq;
 using Xunit;
 
-namespace CodeDesignPlus.Core.Test.Models.Pager
+namespace SDK.Core.Test.Models.Pager
 {
     /// <summary>
     /// Clase que realiza las pruebas unitarias al objeto <see cref="Parameters"/>
@@ -46,7 +46,7 @@ namespace CodeDesignPlus.Core.Test.Models.Pager
         public void Property_CurrentPageIsInvalid_OneValidationError()
         {
             // Arrange
-            var currentPage = new Random().Next((int.MaxValue * -1), 0);
+            var currentPage = new Random().Next(int.MaxValue * -1, 0);
             var maxPage = new Random().Next(1, int.MaxValue);
             var pageSize = new Random().Next(1, int.MaxValue);
 
@@ -73,7 +73,7 @@ namespace CodeDesignPlus.Core.Test.Models.Pager
         {
             // Arrange
             var currentPage = new Random().Next(1, int.MaxValue);
-            var maxPage = new Random().Next((int.MaxValue * -1), 0);
+            var maxPage = new Random().Next(int.MaxValue * -1, 0);
             var pageSize = new Random().Next(1, int.MaxValue);
 
             var parameters = new Parameters()
@@ -100,7 +100,7 @@ namespace CodeDesignPlus.Core.Test.Models.Pager
             // Arrange
             var currentPage = new Random().Next(1, int.MaxValue);
             var maxPage = new Random().Next(1, int.MaxValue);
-            var pageSize = new Random().Next((int.MaxValue * -1), 0);
+            var pageSize = new Random().Next(int.MaxValue * -1, 0);
 
             var parameters = new Parameters()
             {

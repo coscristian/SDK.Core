@@ -1,14 +1,14 @@
-using CodeDesignPlus.Core.Models.Pager;
-using CodeDesignPlus.Core.Test.Helpers.Context;
-using CodeDesignPlus.Core.Test.Helpers.Extensions;
 using Microsoft.EntityFrameworkCore;
+using SDK.Core.Models.Pager;
+using SDK.Core.Test.Helpers.Context;
+using SDK.Core.Test.Helpers.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CodeDesignPlus.Core.Test
+namespace SDK.Core.Test.Models.Pager
 {
     /// <summary>
     /// Clase que realiza las pruebas unitarias al objeto <see cref="Pager{T}"/>
@@ -43,10 +43,10 @@ namespace CodeDesignPlus.Core.Test
         public void Constructor_ArgumentsDefault_StateObjectStandard()
         {
             // Act
-            var pager = new Pager<FakeEntity>(TOTAL_ITEMS, this.data);
+            var pager = new Pager<FakeEntity>(TOTAL_ITEMS, data);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, data);
         }
 
 
@@ -60,7 +60,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = new Pager<FakeEntity>(TOTAL_ITEMS, data, -10);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, data);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = new Pager<FakeEntity>(TOTAL_ITEMS, data, currentPages + 1);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, currentPages, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(TOTAL_ITEMS, currentPages, PAGE_SIZE, MAX_PAGES, pager, this.data);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = new Pager<FakeEntity>(totalItems, data);
 
             // Assert
-            this.AssertPager(totalItems, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(totalItems, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, data);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = new Pager<FakeEntity>(TOTAL_ITEMS, data);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, data);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = new Pager<FakeEntity>(TOTAL_ITEMS, data, currentPage);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, currentPage, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(TOTAL_ITEMS, currentPage, PAGE_SIZE, MAX_PAGES, pager, data);
             Assert.Equal(currentPage - 5, pager.StartPage);
             Assert.Equal(currentPage + 4, pager.EndPage);
         }
@@ -140,7 +140,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = new Pager<FakeEntity>(TOTAL_ITEMS, data, currentPage);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, currentPage, PAGE_SIZE, MAX_PAGES, pager, this.data);
+            AssertPager(TOTAL_ITEMS, currentPage, PAGE_SIZE, MAX_PAGES, pager, data);
             Assert.Equal(currentPage - 5, pager.StartPage);
             Assert.Equal(currentPage + 4, pager.EndPage);
         }
@@ -176,7 +176,7 @@ namespace CodeDesignPlus.Core.Test
             var pager = await fakeContext.FakeEntity.Where(x => x.State).ToPageAsync(CURRENT_PAGE, PAGE_SIZE);
 
             // Assert
-            this.AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, entities);
+            AssertPager(TOTAL_ITEMS, CURRENT_PAGE, PAGE_SIZE, MAX_PAGES, pager, entities);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace CodeDesignPlus.Core.Test
         {
             var startIndex = (currentPage - 1) * pageSize;
             var endIndex = Math.Min(startIndex + pageSize - 1, totalItems - 1);
-            var totalPages = (int)Math.Ceiling((decimal)totalItems / (decimal)pageSize);
+            var totalPages = (int)Math.Ceiling(totalItems / (decimal)pageSize);
 
             maxPages = totalPages <= maxPages ? maxPages = totalPages : maxPages;
 

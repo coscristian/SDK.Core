@@ -1,4 +1,5 @@
-﻿namespace CodeDesignPlus.Core.Abstractions
+﻿
+namespace SDK.Core.Abstractions
 {
     /// <summary>
     /// Definición para las entidades base del patron de repositorio y restricciones de tipos genericos

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CodeDesignPlus.Core.Abstractions
+namespace SDK.Core.Abstractions
 {
     /// <summary>
     /// Especificación del contrato para la administración de servicios personalizados en el SDK CodeDesignPlus

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace CodeDesignPlus.Core.Test.Helpers.Extensions
+namespace SDK.Core.Test.Helpers.Extensions
 {
     /// <summary>
     /// Clase que se encarga de proveer metodos de extensión para la validación de los Data Annotations

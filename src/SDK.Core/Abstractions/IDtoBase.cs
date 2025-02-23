@@ -1,4 +1,5 @@
-﻿namespace CodeDesignPlus.Core.Abstractions
+﻿
+namespace SDK.Core.Abstractions
 {
     /// <summary>
     /// Definición para las entidades base y restricción para tipos genericos

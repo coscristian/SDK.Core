@@ -1,7 +1,7 @@
 ﻿using CodeDesignPlus.Core.Abstractions;
 using System;
 
-namespace CodeDesignPlus.Core.Test.Helpers.Context
+namespace SDK.Core.Test.Helpers.Context
 {
     /// <summary>
     /// Entidad fake que permitira validar el modelo de paginación

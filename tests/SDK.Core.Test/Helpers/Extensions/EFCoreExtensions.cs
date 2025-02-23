@@ -1,10 +1,10 @@
 ﻿using CodeDesignPlus.Core.Abstractions;
-using CodeDesignPlus.Core.Models.Pager;
 using Microsoft.EntityFrameworkCore;
+using SDK.Core.Models.Pager;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CodeDesignPlus.Core.Test.Helpers.Extensions
+namespace SDK.Core.Test.Helpers.Extensions
 {
     /// <summary>
     /// Clase que contiene metodos de extensión para el objeto IQueryable<T>
