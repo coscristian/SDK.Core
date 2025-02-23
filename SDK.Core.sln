@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{F94C4CF1-2FC0-455C-BF40-38FC36C597AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F12302E6-B704-46C5-A5FD-9A3E71C91CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.Core", "src\SDK.Core\SDK.Core.csproj", "{F5D754FC-B08A-44B2-B653-825648B0F9FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DAEBEDFE-F324-4371-925A-9B41FA5BEEAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.Core.Test", "tests\SDK.Core.Test\SDK.Core.Test.csproj", "{B288F51E-D341-48DA-873D-2E60D322390A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5D754FC-B08A-44B2-B653-825648B0F9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D754FC-B08A-44B2-B653-825648B0F9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D754FC-B08A-44B2-B653-825648B0F9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D754FC-B08A-44B2-B653-825648B0F9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B288F51E-D341-48DA-873D-2E60D322390A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B288F51E-D341-48DA-873D-2E60D322390A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B288F51E-D341-48DA-873D-2E60D322390A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B288F51E-D341-48DA-873D-2E60D322390A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5D754FC-B08A-44B2-B653-825648B0F9FD} = {F12302E6-B704-46C5-A5FD-9A3E71C91CF2}
+		{B288F51E-D341-48DA-873D-2E60D322390A} = {DAEBEDFE-F324-4371-925A-9B41FA5BEEAC}
+	EndGlobalSection
+EndGlobal
